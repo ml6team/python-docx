@@ -13,10 +13,10 @@ from ..opc.packuri import PackURI
 from ..opc.part import XmlPart
 from ..oxml import parse_xml
 from ..fntent.fntent import Footnotes, Endnotes
-from .story import BaseStoryPart
+from .story import StoryPart
 
 
-class FootnotesPart(BaseStoryPart):
+class FootnotesPart(StoryPart):
     """
     Proxy for the footnotes.xml part containing footnote definitions for a document.
     """
@@ -53,7 +53,7 @@ class FootnotesPart(BaseStoryPart):
         return xml_bytes
 
 
-class EndnotesPart(BaseStoryPart):
+class EndnotesPart(StoryPart):
     """
     Proxy for the endnotes.xml part containing endnote definitions for a document.
     """
